@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* Eco Garden 配色方案 - Solarpunk 風格 */
+@theme {
+  /* 顏色定義 */
+  --color-mint-cream: #F5FFFA;
+  --color-emerald: #50C878;
+  --color-emerald-dark: #3DA860;
+  --color-coral-orange: #FF7F50;
+  --color-coral-orange-dark: #E86A3A;
+  --color-deep-teal: #0D5C63;
+  --color-deep-teal-light: #0F7A84;
+  
+  /* 字體定義 */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* 陰影定義 - 柔和自然風格 */
+  --shadow-natural: 0 4px 12px rgba(34, 139, 34, 0.2);
+  --shadow-natural-lg: 0 8px 24px rgba(34, 139, 34, 0.25);
+  
+  /* 圓角定義 - 有機曲線 */
+  --radius-organic: 16px;
+  --radius-organic-lg: 20px;
+}
+
+/* 基礎樣式設定 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-mint-cream);
+  color: var(--color-deep-teal);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-deep-teal);
+}
+
+/* 有機按鈕樣式 */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-emerald-dark) 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-organic);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-natural);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-natural-lg);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--color-coral-orange) 0%, var(--color-coral-orange-dark) 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-organic);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-natural);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-natural-lg);
+}
+
+/* 有機卡片樣式 */
+.card-organic {
+  background: white;
+  border-radius: var(--radius-organic-lg);
+  box-shadow: var(--shadow-natural);
+  transition: all 0.3s ease;
+}
+
+.card-organic:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-natural-lg);
+}
+
+/* 毛玻璃效果 */
+.glass-effect {
+  background: rgba(245, 255, 250, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* 區塊間距 */
+.section-padding {
+  padding: 5rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 6rem 2rem;
+  }
+}
+
+/* 動畫效果 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
