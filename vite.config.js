@@ -5,5 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: './', // 設定相對路徑，讓部署到任何子目錄都能正常運作
+  base: '/20260111test/', // 關鍵修正：告訴 Vite 你的網站不是在根目錄，而是在這個子目錄下
 })
